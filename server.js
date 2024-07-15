@@ -1,5 +1,4 @@
-// server.js
-import express from 'express';
+import express, { request, response } from 'express';
 const app = express();
 const port = 3000;
 
@@ -21,4 +20,29 @@ app.get('/api/users', (request, response) => {
 
 app.delete('/api/users', (request, response) => {
     response.json({ result: 'success' })
+})
+
+app.post('/students', (request, reponse) => {
+    const message = "students created successfully";
+    const students = [
+        {
+            "id": 1,
+            "name": "Ervin Howell",
+            "username": "Antonette",
+            "email": "Shanna@melissa.tv",
+        },
+        {
+            "id": 2,
+            "name": "john snow",
+            "username": "starc",
+            "email": "starc@melissa.tv",
+        }
+    ]
+    reponse.status(201).json(students);
+})
+
+app.put('/students/:id', (request, response) => {
+    const userId = request.params.id;
+    const updatedUserData = request.body;
+    response.status(200).json(updatedUserData);
 })

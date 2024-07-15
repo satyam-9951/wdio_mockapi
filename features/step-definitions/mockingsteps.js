@@ -17,12 +17,33 @@ Then(/^I should see the response data$/, async () => {
     expect(responseData.data[1].name).toEqual("Jane Smith");
 });
 
-
 Given(/^I navigate to delete users "([^"]*)"$/, async (url) => {
     responseData = await axios.delete(url);
 });
 
-
-Then(/^I shhould check the delete result$/, async () => {
+Then(/^I should check the delete result$/, async () => {
     expect(responseData.data.result).toEqual("success");
 });
+
+
+Given(/^I navigate to students detail creation endpoint "([^"]*)"$/, async (url) => {
+    responseData = await axios.post(url);
+});
+
+Then(/^I should check the status code$/, async () => {
+    console.log("@@@###");
+    console.log(responseData);
+    expect(responseData.statusText).toEqual("Created");
+    expect(responseData.data[1].name).toEqual("john snow");
+    expect(responseData.status).toEqual(201);
+});
+
+
+Given(/^I navigate to student detail correction endpoint "([^"]*)"$/, async (url) => {
+    responseData = await axios.put(url);
+});
+
+Then(/^I should check the response$/, async () => {
+    expect(responseData.status).toEqual(200);
+});
+
