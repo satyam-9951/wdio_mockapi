@@ -10,12 +10,12 @@ Feature: Test Express API
 
   Scenario: Delete data from users endpoint
     Given I navigate to delete users "http://localhost:3000/api/users"
-    Then I should check the delete result
+    Then I should check the deleted result
 
   Scenario: Post student details
     Given I navigate to students detail creation endpoint "http://localhost:3000/students"
     Then I should check the status code
 
-  Scenario: Post student details
+  Scenario: Put student details
     Given I navigate to student detail correction endpoint "http://localhost:3000/students/:id"
     Then I should check the response
