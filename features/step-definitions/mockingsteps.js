@@ -22,7 +22,7 @@ Given(/^I navigate to delete users "([^"]*)"$/, async (url) => {
     responseData = await axios.delete(url);
 });
 
-Then(/^I should check the delete result$/, async () => {
+Then(/^I should check the deleted result$/, async () => {
     expect(responseData.data.result).toEqual("success");
 });
 
@@ -32,8 +32,6 @@ Given(/^I navigate to students detail creation endpoint "([^"]*)"$/, async (url)
 });
 
 Then(/^I should check the status code$/, async () => {
-    console.log("@@@###");
-    console.log(responseData);
     expect(responseData.statusText).toEqual("Created");
     expect(responseData.data[1].name).toEqual("john snow");
     expect(responseData.status).toEqual(201);
