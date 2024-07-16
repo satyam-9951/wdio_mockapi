@@ -1,4 +1,5 @@
 import { startServer, stopServer } from './server-utils.js';
+import { exec } from 'child_process';
 export const config = {
     //
     // ====================
@@ -302,7 +303,6 @@ export const config = {
      * @param {Array.<String>} specs List of spec file paths that ran
      */
     // after: function (result, capabilities, specs) {
-    // },
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {object} config wdio configuration object
