@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import axios from 'axios';
 let responseData;
+
 Given(/^I navigate to "([^"]*)"$/, async (url) => {
     responseData = await axios.get(url);
 });

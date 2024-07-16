@@ -1,0 +1,44 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john@example.com",
+      "book": "1984",
+      "author": "George Orwell"
+    },
+    {
+      "id": 2,
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane@example.com",
+      "book": "To Kill a Mockingbird",
+      "author": "Harper Lee"
+    },
+    {
+      "id": 3,
+      "firstname": "Michael",
+      "lastname": "Johnson",
+      "email": "michael@example.com",
+      "book": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald"
+    },
+    {
+      "id": 4,
+      "firstname": "Emily",
+      "lastname": "Davis",
+      "email": "emily@example.com",
+      "book": "Pride and Prejudice",
+      "author": "Jane Austen"
+    },
+    {
+      "id": 5,
+      "firstname": "David",
+      "lastname": "Wilson",
+      "email": "david@example.com",
+      "book": "Moby Dick",
+      "author": "Herman Melville"
+    }
+  ]
+}
